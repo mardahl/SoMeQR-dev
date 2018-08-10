@@ -1,6 +1,7 @@
 (function() {
   'use strict';
 
+  //getting window size for calculating the size og the QR Code Canvas
   let size = (window.innerWidth * 0.50)
   
   window.onload = function() {
@@ -17,7 +18,7 @@
      $('#qrcode').qrcode({width: size, height: size, text: message});
    });
 
-
+//registering serviceworker for PWA
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
              .register('./service-worker.js')
