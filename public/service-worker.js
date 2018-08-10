@@ -1,5 +1,5 @@
-var dataCacheName = 'template-pwa';
-var cacheName = 'template-pwa';
+var dataCacheName = 'someqr-pwa';
+var cacheName = 'someqr-pwa';
 var filesToCache = [
   '/',
  "./fonts",
@@ -16,16 +16,22 @@ var filesToCache = [
  "./fonts/roboto/Roboto-Thin.woff2",
  "./images",
  "./images/icons",
- "./images/icons/icon-128x128.png",
- "./images/icons/icon-144x144.png",
- "./images/icons/icon-152x152.png",
- "./images/icons/icon-192x192.png",
- "./images/icons/icon-256x256.png",
+ "./images/icons/android-chrome-192x192.png",
+ "./images/icons/android-chrome-512x512.png",
+ "./images/icons/apple-touch-icon.png",
+ "./images/icons/favicon-16x16.png",
+ "./images/icons/favicon-32x32.png",
+ "./images/icons/mstile-70x70.png",
+ "./images/icons/safari-pinned-tab.svg",
+ "./images/icons/site.webmanifest",
+ "./images/icons/browserconfig.xml",
+ "./images/icons/favicon.ico",
  "./index.html",
  "./manifest.json",
  "./scripts",
  "./scripts/app.js",
  "./scripts/jquery-3.3.1.js",
+ "./scripts/jquery.qrcode.min.js",
  "./scripts/materialize.js",
  "./service-worker.js",
  "./styles",
