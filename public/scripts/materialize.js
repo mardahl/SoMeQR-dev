@@ -5451,7 +5451,7 @@ if (Vel) {
         if ($card.data('initialOverflow') === undefined) {
           $card.data('initialOverflow', $card.css('overflow') === undefined ? '' : $card.css('overflow'));
         }
-        if ($(e.target).is($('.card-reveal .card-title')) || $(e.target).is($('.card-reveal .card-title i'))) {
+        if ($(e.target).is($('.card-reveal .card-title')) || $(e.target).is($('.card-reveal .card-title i')) || $(e.target).is($('.card-reveal button'))) {
           // Make Reveal animate down and display none
           $(this).find('.card-reveal').velocity({ translateY: 0 }, {
             duration: 225,
@@ -5462,7 +5462,7 @@ if (Vel) {
               $card.css('overflow', $card.data('initialOverflow'));
             }
           });
-        } else if ($(e.target).is($('.card .activator')) || $(e.target).is($('.card .activator i'))) {
+        } else if ($(e.target).is($('.card .activator')) || $(e.target).is($('.card .activator i')) || $(e.target).is($('.card .activator canvas'))) {
           $card.css('overflow', 'hidden');
           $(this).find('.card-reveal').css({ display: 'block' }).velocity("stop", false).velocity({ translateY: '-100%' }, { duration: 300, queue: false, easing: 'easeInOutQuad' });
         }

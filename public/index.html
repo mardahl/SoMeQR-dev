@@ -5,54 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Template PWA</title>
+    <title>SoMeQR</title>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="styles/materialize.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 
     <script type="text/javascript" src="scripts/jquery-3.3.1.js"></script>
-
+	<script type="text/javascript" src="scripts/jquery.qrcode.min.js"></script>
+	<script type="text/javascript" src="scripts/materialize.js"></script>
+	
     <link rel="manifest" href="/manifest.json">
 
-    <!-- Add to home screen for Safari on iOS -->
+    <!-- APP ICONS! -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Template PWA">
-    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
-    <!-- Windows -->
-    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#2F3BA2">
+    <meta name="apple-mobile-web-app-title" content="SoMeQR">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+	<link rel="manifest" href="images/icons/site.webmanifest">
+	<link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#eb296d">
+	<meta name="msapplication-TileColor" content="#eb296d">
+	<meta name="theme-color" content="#eb296d">
 
-    <link rel="icon"
-         type="image/png"
-         href="images/icons/icon-144x144.png">
+
   </head>
   <body>
 
     <nav>
-      <div class="nav-wrapper blue darken-4">
-        <a href="#" class="brand-logo center">Template PWA</a>
+      <div class="nav-wrapper pink lighten-1">
+        <a href="#" class="brand-logo center"><span style="font-family: 'Questrial', sans-serif;">SoMeQR</span></a>
       </div>
     </nav>
 
     <main class="container">
-      <div class="row">
-        <div class="col s12">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Your message</span>
-              <p><div id="display">DISPLAY</div></p>
-            </div>
-          </div>
-          Enter your message
-          <input id="message" type="text" class="validate">
-          <button class="waves-effect waves-light btn-large" id="button" type="button" name="button">
-            Submit
-          </button>
-        </div>
-      </div>
+	
+	
+		<div class="row">
+			<div class="col s12">
+			
+			
+				<div class="card">
+				
+					<div class="card-image waves-effect waves-block waves-light">
+						<div id="qrcode" class="activator"></div>
+					</div>
+					<div class="card-content">
+						<span class="card-title activator grey-text text-darken-4">SCAN TO BE SOCIAL<i class="material-icons right">more_vert</i></span>
+					</div>
+					
+					<div class="card-reveal">
+					      <span class="card-title grey-text text-darken-4">QR Code Link<i class="material-icons right">close</i></span>
+							<p class="flow-text">
+								Enter your Social Media Profile URL<br/>
+								<small>not saved permanently! (read how to).</small>
+								<input placeholder="https://twitter.com/intent/follow?screen_name=michael_mardahl" id="qrCodeMessage" type="text" class="validate">
+								<button class="waves-effect waves-light btn-large green accent-4" id="buttonGenerate" type="button" name="button">
+								<i class="material-icons left">autorenew</i>Generate
+								</button>
+							</p>
+					</div>
+					
+				</div>	
+					
+				<div class="row">
+					<div class="col s12">
+				
+						<ul class="collapsible">
+							<li>
+								<div class="collapsible-header"><i class="material-icons">help_outline</i>How to</div>
+								<div class="collapsible-body">
+									<span>
+										<p class="flow-text">
+											Type in the URL to your personal Social Media Profile and Generate a QR code Image.<br/><hr/>
+											Once Done, take a screen grab of the code, and set it as your lock screen image on your mobile.<br/>
+											Now you can share your profile with anyone who opens up their camera app, and holds it over your lock screen!<br/>
+											Or put it in the corner of your PowerPoint slides, so audiences can connect with you!<br/>
+											<small>(Requires QR recognition in mobile camera app - most phones have this))</small>
+										</p>
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons">star</i>Examples</div>
+								<div class="collapsible-body">
+									<span>
+										<p class="flow-text">
+											Twitter Follow URL:<br/><small>https://twitter.com/intent/follow?screen_name=&lt;twitter_handle&gt;</small><br/>
+											LinkedIn Profile URL:<br/><small><a href="https://www.linkedin.com/pulse/customising-your-linkedin-public-profile-url-like-pro-darren-keppie/" target="_blank" rel="noopener" title="View guide to find the LinkedIn URL">https://www.linkedin.com/in/&lt;custom_name&gt;/</a></small></br>
+											Facebook Profile URL:<br/><small><a href="https://www.howtogeek.com/309879/how-to-give-your-facebook-profile-a-custom-url/" target="_blank" rel="noopener" title="View guide to find the Facebook URL">https://www.facebook.com/&lt;custom_name&gt;/</a></small></br>
+										</p>
+									</span>
+								</div>
+							</li>
+						</ul>
+						
+					</div>
+				</div>				
+
+			</div>
+		</div>
     </main>
 
     <script type="text/javascript" src="scripts/app.js"></script>

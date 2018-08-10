@@ -1,19 +1,22 @@
 (function() {
   'use strict';
 
+  let size = (window.innerWidth * 0.50)
+  
   window.onload = function() {
-    let message = localStorage.getItem("message") || 'Your message will display here';
-    $('#message').html(message);
-    $('#display').html(message);
+    let content = localStorage.getItem("qrCodeMessage") || 'https://twitter.com/intent/follow?screen_name=michael_mardahl';
+    //$('#qrCodeMessage').val(content);
+    $('#qrcode').qrcode({width: size, height: size, text: content});
   }
 
-  $('#button').click(() => {
-    console.log('click')
-    let message = $('#message').val();
-    console.log(message);
-    $('#display').html(message);
-    localStorage.setItem("message", message);
-  });
+   $('#buttonGenerate').click(() => {
+     console.log('click');
+     let message = $('#qrCodeMessage').val();
+     localStorage.setItem("qrCodeMessage", message);
+     $('#qrcode').html('');
+     $('#qrcode').qrcode({width: size, height: size, text: message});
+   });
+
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
