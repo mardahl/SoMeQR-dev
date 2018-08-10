@@ -2,6 +2,8 @@ var dataCacheName = 'someqr-pwa';
 var cacheName = 'someqr-pwa';
 var filesToCache = [
   '/',
+ "https://fonts.googleapis.com/icon?family=Material+Icons",
+ "https://fonts.googleapis.com/css?family=Questrial",
  "./fonts",
  "./fonts/roboto",
  "./fonts/roboto/Roboto-Bold.woff",
@@ -38,6 +40,8 @@ var filesToCache = [
  "./styles/materialize.css",
  "./styles/style.css"
 ];
+
+
 
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
