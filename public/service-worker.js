@@ -76,7 +76,10 @@ self.addEventListener("install", function(event) {
            The method below will add all resources in `offlineFundamentals` to the
            cache, after making requests for them.
         */
-        return cache.addAll(offlineFundamentals);
+        //return cache.addAll(offlineFundamentals);
+		return cache.addAll(offlineFundamentals)
+		.then(() => console.log('WORKER: Assets added to cache'))
+		.catch(err => console.log('WORKER: Error while fetching assets', err));
       })
       .then(function() {
         console.log('WORKER: install completed');
