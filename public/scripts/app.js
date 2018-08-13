@@ -1,5 +1,13 @@
 (function() {
   'use strict';
+  
+	document.addEventListener("DOMContentLoaded", function(){
+	$('.preloader-background').delay(1700).fadeOut('slow');
+
+	$('.preloader-wrapper')
+		.delay(1700)
+		.fadeOut();
+	});
 
   //getting window size for calculating the size og the QR Code Canvas
   let size = (window.innerWidth * 0.50)
