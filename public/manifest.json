@@ -1,7 +1,12 @@
 {
   "name": "SoMeQR",
   "short_name": "SoMeQR",
+  "description": "Create a Social Media QR Code for your lockscreen!",
   "icons": [{
+      "src": "images/icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }, {
       "src": "images/icons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
